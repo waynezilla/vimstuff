@@ -1,0 +1,37 @@
+Setting Up Vim With Snippets
+
+Using UltiSnips you will need Vim compiled with python/python3
+
+Assuming you want to setup vundle/ultisnips for a basic programming environment:-
+git clone git://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone git://github.com/SirVer/ultisnips.git bundle/ultisnips
+git clone git://github.com/honza/vim-snippets.git ~/.vim/bundle/vim-snippets
+
+Then you need to configure your .vimrc so that the vundle is configured and the plugins are loaded :-
+
+(at start of .vimrc)
+#settings needed for UltiSnips
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialise
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'honza/vim-snippets'
+
+"<===============================================
+" Configure plugins here
+Plugin 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+"<================================================
+call vundle#end()
+filetype plugin indent on
+" Done with Vundle config
+
+(rest of vimrc)
+
+
