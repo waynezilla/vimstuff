@@ -4,8 +4,9 @@ Using UltiSnips you will need Vim compiled with python/python3
 
 Assuming you want to setup vundle/ultisnips for a basic programming environment:-
 git clone git://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-git clone git://github.com/SirVer/ultisnips.git bundle/ultisnips
+git clone git://github.com/SirVer/ultisnips.git ~/.vim/bundle/ultisnips
 git clone git://github.com/honza/vim-snippets.git ~/.vim/bundle/vim-snippets
+git clone git://github.com/scrooloose/nerdtree.vim ~/.vim/bundle/nerdtree
 
 Then you need to configure your .vimrc so that the vundle is configured and the plugins are loaded :-
 
