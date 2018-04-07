@@ -19,12 +19,26 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 Plugin 'honza/vim-snippets'
+Plugin 'scrooloose/nerdtree'
+"let NERDTreeShowHidden=1
+Plugin 'scrooloose/nerdcommenter'
+let g:NERDSpaceDelims = 2
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
 "<================================================
 call vundle#end()
 filetype plugin indent on
 " Done with Vundle config
 
+"Other Settings
+syntax on
+set nowrap
+
+
 " Some of my own common shortcuts
+map <C-n> :NERDTreeToggle <CR>
+
 " Add datestamp
 nnoremap <F5> "=strftime("%c")<CR>P
 inoremap <F5> <C-R>"=strftime("%c")<CR>
